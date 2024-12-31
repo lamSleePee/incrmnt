@@ -409,7 +409,7 @@ body{
     }
 
     .task-container{
-        height: calc(100vh - 530px);
+        height: 50vh;
     }
 
     #task-list-container{
