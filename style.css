@@ -371,3 +371,51 @@ body{
 #no-task-display.noneClass{
     display: none;
 }
+
+
+/*for mobile device*/
+
+@media (width<=800px){
+    .main-container{
+        height: calc(100vh - 100px);
+        display: block;
+        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .timer-container{
+        height: calc(100vh - 500px);
+    }
+
+    #timer{
+        height: 120px;
+        width: 300px;
+        font-size: 100px;
+    }
+
+    .timer-buttons{
+        width: 350px;
+        height: 50px;
+    
+    }
+
+    .timer-buttons>button{
+        font-size: 15px;
+    }
+    
+    .timer-buttons>button:active{
+        font-size: 12px;
+        
+    }
+
+    .task-container{
+        height: calc(100vh - 530px);
+    }
+
+    #task-list-container{
+    
+
+        max-height: calc(100vh - 100px);
+    }
+}
+
