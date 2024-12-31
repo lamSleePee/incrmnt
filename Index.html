@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header">
+        <h1>incrmnt</h1>
+    </div>
+    <div class="main-container">
+        
+        <!--timer-->
+        <div class="timer-container">
+            <div id="timer">
+                25:00
+            </div>
+
+            <div class="timer-stage-container">
+                        <div id="timer-percent-bar">
+                            .
+                        </div>
+            </div>
+        
+        <!--timer-buttons-->
+            <div class="timer-buttons">
+            <button id="play-timer" class="playBtn"><span class="startspan">START</span><i id="playpauseIcon" class="fa-solid fa-play"></i></button>
+            <button id="next-stage" class="nextStageBtn"><span class="nextspan">NEXT</span><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="reset-timer" class="resetStagesBtn"><span class="stopspan">END</span><i class="fa-solid fa-arrow-rotate-left"></i></button>
+        </div>
+
+        
+    </div>
+        <!--task-list-->
+        <div class="task-container">
+            <div class="add-task-container">
+                <input id="user-input-task" placeholder="Enter Task">
+                <button id="add-task-button"><i class="fa-solid fa-plus"></i></button>
+            </div>
+                
+            <div id="task-list-container">
+                
+
+                <div id="no-task-display" class="">There Are No Tasks</div>
+
+                <div class="new-task"></div>
+               
+               
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

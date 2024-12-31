@@ -1,0 +1,373 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    height: 100vh;
+}
+
+.header{
+    height: 100px;
+    background-color: #040f0f;
+    display: flex;
+    align-items: center;
+}
+
+.header > h1{
+    padding: 20px;
+    color: rgb(137, 229, 145);
+}
+
+.main-container{
+    height: calc(100vh - 100px);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.timer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #89c07e;
+}
+
+#timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 550px;
+
+    background-color: #467750;
+    color: white;
+
+    font-size: 180px;
+    text-align: center;
+    padding: 10px;
+
+    font-family: Quicksand, Arial;
+    font-weight: 500;
+    
+
+    
+    border-radius: 100px;
+
+
+}
+
+.timer-stage-container{
+    height: 20px;
+    width: 250px;
+
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+
+    margin: 10px;
+    overflow: hidden;
+    padding: 2px 4px;
+    display: flex;
+    
+    align-items: center;
+}
+
+#timer-percent-bar{
+    color: transparent;
+    background-color: rgb(240,205,110);
+    height: 80%;
+   
+
+    
+    border-radius: 150px;
+}
+
+.timer-buttons{
+    width: 650px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    font-family: Quicksand,Arial;
+}
+
+.timer-buttons>button{
+    height: 100%;
+    width: 25%;
+
+    border-radius: 40px;
+    border: none;
+    font-size: 25px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    align-content: space-evenly;
+
+    position: relative;
+
+    background-color: black;
+    color: white;
+    transition-duration: 0.1s;
+    
+    
+}
+
+.timer-buttons>button:active{
+    font-size: 23px;
+    
+
+}
+
+
+.timer-buttons>button>span{
+    flex: 70%;
+    margin: 0;
+    padding-left: 12px;
+
+    font-family: Quicksand,Arial;
+    font-weight: 600;
+    font-size: inherit;
+    
+    
+}
+
+.timer-buttons>button>i{
+    flex: 30%;
+    padding-right: 10px;
+    font-size: inherit;
+   
+    
+}
+
+
+.playBtn{
+    
+}
+
+.pauseBtn{
+   
+}
+
+.nextStageBtn{
+    
+}
+
+.resetStagesBtn{
+    
+}
+
+
+.playBtn:hover{
+    color: rgb(170, 255, 170);
+}
+
+.pauseBtn:hover{
+    color: rgb(255, 255, 170);
+}
+
+.nextStageBtn:hover{
+    color: rgb(100, 170, 255);
+}
+
+.resetStagesBtn:hover{
+    color: rgb(255, 170, 170);
+}
+
+
+
+
+
+
+/*timer styling*/
+
+.task-container{
+    background-color: rgb(42,63,63);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+}
+
+.add-task-container{
+    height: 50px;
+    width: 300px;
+
+    padding: 3px 10PX;
+
+    background-color: #040f0f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+
+    border-radius: 40px;
+
+}
+
+#user-input-task::placeholder{
+    text-align: center;
+    color: rgb(113, 113, 113);
+}
+
+
+#user-input-task{
+    flex: 8;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 40PX;
+    border: none;
+    padding: 0px 5px;
+}
+
+#add-task-button{
+    flex: 2;
+
+    border-radius: 50%;
+    height: 30px;
+    max-width: 30px;
+    margin-left: 10px;
+
+    background-color: rgb(240,205,110);
+
+    border: none;
+}
+
+#add-task-button:hover{
+    background-color: rgb(170, 255, 170);
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(1,2.6,.27,2.06) ;
+
+    
+}
+
+#add-task-button:active{
+    font-size : 25px;
+    transition: 0.1s;
+    transition-timing-function:cubic-bezier(.89,-0.56,.27,1.51);
+
+}
+
+#task-list-container{
+    
+
+    max-height: calc(100vh - 300px);
+    width: 350px;
+    background-color: black;
+    color: aliceblue;
+    text-align:center;
+    padding: 5px 15px 15px 15px;
+
+    margin-top: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    
+    transition-duration: 0.45s;
+
+} 
+
+#task-list-container::-webkit-scrollbar{
+    display:none;
+    margin: 0;
+    padding: 0;
+}
+
+#no-task-display{
+    display: no;
+}
+
+.task{
+    
+
+    background-color: white;
+    min-height: 30px;
+    max-height: max-content;
+    border-radius: 15px;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Quicksand;
+    font-weight: 600;
+    font-size: 20px;
+
+    margin-top: 10px;
+
+    
+    line-height: 22px;
+
+
+}
+
+.task>li{
+    
+    list-style: none;
+    flex: 4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 4px 0px;
+
+}
+
+.task button{
+    padding: 0;
+    flex: 0.5;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0,1.97,.23,.24);
+}
+
+.task button:hover{
+    font-size: 22px;
+}
+
+.task .checkbtn{
+    color: rgb(90, 200, 90);
+}
+
+.task .delbtn{
+    color: rgb(200, 90, 90);
+}
+
+#no-task-display{
+    background-color: white;
+    height: 30px;
+    border-radius: 15px;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Quicksand;
+    font-weight: 600;
+    font-size: 20px;
+
+    margin-top: 10px;
+}
+
+#no-task-display.noneClass{
+    display: none;
+}
