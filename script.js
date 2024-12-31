@@ -124,7 +124,7 @@ timerPlayBtn.addEventListener('click',function(){
 
     //to turn on timer if its paused or to turn it off if started
     if(timerStatus == true){
-        timerInterval = window.setInterval(timer, 10)
+        timerInterval = window.setInterval(timer, 1000)
         timerStatus = false
     }else if(timerStatus == false){
         window.clearInterval(timerInterval)
